@@ -15,23 +15,11 @@ public class Main {
         String testName = "Igor";
         String testLastName = "Perov";
         Byte testAge = 22;
-
         userService.dropUsersTable();
         userService.createUsersTable();
         userService.saveUser(testName, testLastName, testAge);
-
         User user = userService.getAllUsers().get(0);
-
-
         userService.createUsersTable();
         userService.saveUser(testName, testLastName, testAge);
-        System.out.println(testName.equals(testName));
-
-
-
-
     }
 }
-/*
-    в методе main  userService.createUsersTable(); в Userservicetest тоже создаётся, но выводит ошибку()
-*/
